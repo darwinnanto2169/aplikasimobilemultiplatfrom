@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar> 
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar> 
+</ion-header>
+
+<ion-content padding>
+  
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5"
+size-xs="12">
+          <form  #form="ngForm" (ngSubmit)="registerUser()">
+            <div text-center>
+              <br>
+              <img style="width: 150px; height: 135px;"
+src="assets/imgs/logo-polbeng.png"/>
+              <h4>ProfileApp</h4>
+            </div>
+            <div padding>
+    <ion-list>
+              <ion-label>NIM</ion-label>
+              <ion-item>
+                <ion-input  name="nim" type="number"
+placeholder="Masukkan Nim..."  [(ngModel)]="userAccount.nim"
+required></ion-input>
+              </ion-item>
+              <hr>
+              <ion-label>Nama Lengkap</ion-label>
+              <ion-item>
+              <ion-input  name="username" type="text"
+placeholder="Masukkan Nama Lengkap Anda..."  [(ngModel)]="userAccount.username"
+required></ion-input>
+              </ion-item>
+              <hr>
+              <ion-label>Tempat Lahir</ion-label>
+              <ion-item>
+              <ion-input  name="tempatlahir" type="text"
+placeholder="Masukkan Tempat Lahir Anda..."  [(ngModel)]="userAccount.tempatlahir"
+required></ion-input>
+              </ion-item>
+    </ion-list>
+
+    <hr>
+  <ion-list>
+    <ion-label>Tanggal Lahir</ion-label>
+    <ion-item>
+      <ion-datetime name="month" displayFormat="MMM DD YYYY" [(ngModel)]="userAccount.month" placeholder="Masukkan Bulan/Tanggal/Tahun Anda..."></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <hr>
+  
+  <ion-list>
+    <ion-label>Alamat</ion-label>
+              <ion-item>
+              <ion-input  name="alamat" type="text"
+placeholder="Masukkan Alamat Anda..."  [(ngModel)]="userAccount.alamat"
+required></ion-input>
+              </ion-item>
+              <hr>
+              <ion-label>No Handphone</ion-label>
+              <ion-item>
+              <ion-input  name="nohp" type="number"
+placeholder="Masukkan No HP Anda..."  [(ngModel)]="userAccount.nohp"
+required></ion-input>
+              </ion-item>
+              <hr>
+              <ion-label>Cita-Cita</ion-label>
+              <ion-item>
+              <ion-input  name="citacita" type="text"
+placeholder="Masukkan Cita-Cita Anda..."  [(ngModel)]="userAccount.citacita"
+required></ion-input>
+              </ion-item>
+              <hr>
+              <ion-label>Langkah Cita-Cita</ion-label>
+              <ion-item>
+              <ion-input  name="langkahcitacita" type="text"
+placeholder="Masukkan Langkah Cita-Cita Anda..."  [(ngModel)]="userAccount.langkahcitacita"
+required></ion-input>
+              </ion-item>
+  </ion-list>
+              <ion-label>Password</ion-label>
+              <ion-item>
+                <ion-input name="password" type="password"
+placeholder="Masukkan Password Anda"  [(ngModel)]="userAccount.password"
+required></ion-input>
+              </ion-item>
+          </div>
+          <div padding>
+            <button ion-button  size="large" type="submit"
+[disabled]="form.invalid" block>Register</button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+                        
+</ion-content>
